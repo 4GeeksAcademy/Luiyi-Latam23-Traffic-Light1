@@ -5,13 +5,10 @@ const Lights = (props) => {
     <div className="container text-center">
       <div className="lightsHolder"></div>
       <div className="trafficLights">
-        <div className="redLight">{props.redLightClick}</div>
-        <div className="yellowLight">{props.yellowLightClick}</div>
-        <div className="greenLight">{props.greenLightClick}</div>
+        <div className="redLight" onClick={props.redLightClick}></div>
+        <div className="yellowLight" onClick={props.yellowLightClick}></div>
+        <div className="greenLight" onClick={props.greenLightClick}></div>
       </div>
-      {props.clickedColor && (
-        <p>You clicked the {props.clickedColor} color!!</p>
-      )}
     </div>
   );
 };
