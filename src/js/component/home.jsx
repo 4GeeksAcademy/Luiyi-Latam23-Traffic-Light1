@@ -13,23 +13,12 @@ const TrafficLight = () => {
   };
 
   return (
-    <div className="container text-center">
-      <div className="lightsHolder"></div>
-      <div className="trafficLights">
-        <div
-          className={`redLight ${isLightSelected("red")}`}
-          onClick={() => handleLightClick("red")}
-        ></div>
-        <div
-          className={`yellowLight ${isLightSelected("yellow")}`}
-          onClick={() => handleLightClick("yellow")}
-        ></div>
-        <div
-          className={`greenLight ${isLightSelected("green")}`}
-          onClick={() => handleLightClick("green")}
-        ></div>
-      </div>
-    </div>
+    <Lights
+      redLightClick={() => handleLightClick("red")}
+      yellowLightClick={() => handleLightClick("yellow")}
+      greenLightClick={() => handleLightClick("green")}
+      selectedClass={isLightSelected}
+    />
   );
 };
 
